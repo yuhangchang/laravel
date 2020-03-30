@@ -10,6 +10,31 @@ use Exception;
 
 class HelloWorldController extends Controller
 {
+    /**
+    *
+    *@OA\Info(
+    *   version = "1.0.0",
+    *   title = "maskdata"
+    *),
+    *@OA\Get(
+    *   path="/test",
+    *   summary="mask data",
+    *   @OA\Parameter(
+    *       name = "address",
+    *       description = "地址",
+    *       required = true,
+    *       in = "query",
+    *       @OA\Schema(
+    *           type = "string"
+    *       )
+    *
+    *   ),
+    *   @OA\Response(
+    *     response=200,
+    *     description="successful",
+    *   ),
+    *)
+    */
     public function downloadFile()
     {
         $maskDataUrl = "http://data.nhi.gov.tw/Datasets/Download.ashx?rid=A21030000I-D50001-001&l=https://data.nhi.gov.tw/resource/mask/maskdata.csv";
